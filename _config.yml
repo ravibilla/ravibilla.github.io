@@ -1,0 +1,91 @@
+title: my personal space
+author_name: Ravi Billa
+url: https://ravibilla.github.io
+description: Personal site of Ravi Billa.
+
+theme: dev-portfolio-blog
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-minifier
+  - jekyll-assets
+  - sprockets
+  - autoprefixer-rails
+  - jemoji
+
+# Pagination (jekyll-paginate-v2)
+pagination:
+  enabled: true
+  collection: "posts"
+  per_page: 10
+  permalink: "/blog/:num/"
+  title: ":title - page :num"
+  limit: 10
+  sort_field: "date"
+  sort_reverse: true
+  category: "posts"
+  tag: ""
+  locale: ""
+  trail:
+    before: 2
+    after: 2
+  extension: html
+  indexpage: "index"
+
+# HTML / CSS / JS minification
+jekyll-minifier:
+  preserve_php: false
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_comments: true
+  remove_intertag_spaces: true
+  compress_css: true
+  compress_javascript: true
+  compress_json: true
+  uglifier_args:
+    harmony: true
+
+# jekyll-assets pipeline
+assets:
+  source_maps: false
+  destination: "/assets"
+  compression: true
+  gzip: false
+  defaults:
+    integrity:
+      { css, img, js }: false
+  caching:
+    enabled: true
+    path: ".jekyll-cache/assets"
+    type: file
+  precompile: []
+  raw_precompile: []
+  cdn:
+    baseurl: false
+    destination: false
+    url: null
+  sources:
+    - _assets/custom
+  plugins:
+    css: { autoprefixer: {} }
+    img: { optim: {} }
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+
+# Disqus disabled (leave shortname blank)
+disqus:
+  shortname: ""
+
+# Build settings
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - README.md
+  - node_modules
