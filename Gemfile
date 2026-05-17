@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
+gem "jekyll", "~> 3.9"
 gem "dev-portfolio-blog"
 
 # Plugins used by the theme
