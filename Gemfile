@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 3.9"
 gem "dev-portfolio-blog"
+gem "kramdown-parser-gfm"
 
 # Plugins used by the theme
 group :jekyll_plugins do
